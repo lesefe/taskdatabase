@@ -1,0 +1,28 @@
+    <title>Historical Data</title>
+
+
+    <h2>Zone Data</h2>
+
+	{% for row in zone_data %}
+
+	  {% for cell in row %}
+
+	  {% endfor %}
+
+	{% endfor %}
+    <table border="1">
+      <tbody><tr>
+	<th>Date</th>
+	<th>Time</th>
+	<th>Zone</th>
+	<th>Temperature</th>
+      </tr><tr><td> {{cell}} </td></tr></tbody></table>
+    <form action="zone_data" id="zoneform" method="post">
+      <select name="area" form="zoneform">
+      {% for zone in zones%}
+      <option value="{{zone}}">{{zone}}</option>
+      {% endfor %}
+    </select>
+
+      <input name="Select Zone" type="submit">
+    </form>

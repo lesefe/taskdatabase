@@ -1,0 +1,17 @@
+<h2>Historical Data</h2>
+
+  {% for row in historical_data %}
+
+    {% for cell in row %}
+
+    {% endfor %}
+
+  {% endfor %}
+
+<table border!="1">
+  <tbody><tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Zone</th>
+    <th>Temperature</th>
+  </tr><tr><td> {{cell}} </td><tr></tbody></table>
